@@ -21,10 +21,34 @@ body {
   padding-left: 25px;
   padding-right: 25px;
 }
+@media screen and (min-width: 500px) {
+  .wrapper {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .wrapper {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
 
 .header {
   padding-top: 15px;
   padding-bottom: 15px;
+}
+@media screen and (min-width: 500px) {
+  .header {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 }
 .header__container {
   display: flex;
@@ -34,6 +58,11 @@ body {
 .header__container .logo-container {
   height: 35px;
   width: auto;
+}
+@media screen and (min-width: 500px) {
+  .header__container .logo-container {
+    height: 45px;
+  }
 }
 .header__container .logo-container .logo {
   height: 100%;
@@ -50,15 +79,39 @@ body {
   color: #FF6E31;
   font-size: 2rem;
 }
+@media screen and (min-width: 500px) {
+  .header__container .socials li a {
+    font-size: 2.5rem;
+  }
+}
 
 .hero {
   padding-top: 50px;
+  padding-bottom: 50px;
+}
+@media screen and (min-width: 500px) {
+  .hero {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }
 .hero__container {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.hero__container .hero-title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 25px;
+}
+@media screen and (min-width: 500px) {
+  .hero__container .hero-title {
+    font-size: 4rem;
+    margin-bottom: 50px;
+  }
 }
 .hero__container .border-result {
   width: 100%;
@@ -69,8 +122,254 @@ body {
   align-items: center;
   justify-content: center;
 }
+@media screen and (min-width: 500px) {
+  .hero__container .border-result {
+    max-width: 450px;
+  }
+}
 .hero__container .border-result span {
   color: #FF6E31;
   font-size: 0.8rem;
-  width: 220px;
+  width: 230px;
+}
+@media screen and (min-width: 500px) {
+  .hero__container .border-result span {
+    font-size: 1rem;
+    width: 285px;
+  }
+}
+.hero__container .border-inputs {
+  margin-top: 50px;
+  width: 100%;
+}
+@media screen and (min-width: 500px) {
+  .hero__container .border-inputs {
+    max-width: 450px;
+  }
+}
+.hero__container .border-inputs .top-left-container,
+.hero__container .border-inputs .top-right-container,
+.hero__container .border-inputs .bottom-left-container,
+.hero__container .border-inputs .bottom-right-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.hero__container .border-inputs .top-left-container .top-left-label,
+.hero__container .border-inputs .top-left-container .top-right-label,
+.hero__container .border-inputs .top-left-container .bottom-left-label,
+.hero__container .border-inputs .top-left-container .bottom-right-label,
+.hero__container .border-inputs .top-right-container .top-left-label,
+.hero__container .border-inputs .top-right-container .top-right-label,
+.hero__container .border-inputs .top-right-container .bottom-left-label,
+.hero__container .border-inputs .top-right-container .bottom-right-label,
+.hero__container .border-inputs .bottom-left-container .top-left-label,
+.hero__container .border-inputs .bottom-left-container .top-right-label,
+.hero__container .border-inputs .bottom-left-container .bottom-left-label,
+.hero__container .border-inputs .bottom-left-container .bottom-right-label,
+.hero__container .border-inputs .bottom-right-container .top-left-label,
+.hero__container .border-inputs .bottom-right-container .top-right-label,
+.hero__container .border-inputs .bottom-right-container .bottom-left-label,
+.hero__container .border-inputs .bottom-right-container .bottom-right-label {
+  color: #FF6E31;
+  font-weight: 600;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.hero__container .border-inputs .top-left-container .top-left-input,
+.hero__container .border-inputs .top-left-container .top-right-input,
+.hero__container .border-inputs .top-left-container .bottom-left-input,
+.hero__container .border-inputs .top-left-container .bottom-right-input,
+.hero__container .border-inputs .top-right-container .top-left-input,
+.hero__container .border-inputs .top-right-container .top-right-input,
+.hero__container .border-inputs .top-right-container .bottom-left-input,
+.hero__container .border-inputs .top-right-container .bottom-right-input,
+.hero__container .border-inputs .bottom-left-container .top-left-input,
+.hero__container .border-inputs .bottom-left-container .top-right-input,
+.hero__container .border-inputs .bottom-left-container .bottom-left-input,
+.hero__container .border-inputs .bottom-left-container .bottom-right-input,
+.hero__container .border-inputs .bottom-right-container .top-left-input,
+.hero__container .border-inputs .bottom-right-container .top-right-input,
+.hero__container .border-inputs .bottom-right-container .bottom-left-input,
+.hero__container .border-inputs .bottom-right-container .bottom-right-input {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  height: 10px;
+  background-color: #182542;
+  outline: none;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+  border-radius: 20px;
+}
+.hero__container .border-inputs .top-left-container .top-left-input:hover,
+.hero__container .border-inputs .top-left-container .top-right-input:hover,
+.hero__container .border-inputs .top-left-container .bottom-left-input:hover,
+.hero__container .border-inputs .top-left-container .bottom-right-input:hover,
+.hero__container .border-inputs .top-right-container .top-left-input:hover,
+.hero__container .border-inputs .top-right-container .top-right-input:hover,
+.hero__container .border-inputs .top-right-container .bottom-left-input:hover,
+.hero__container .border-inputs .top-right-container .bottom-right-input:hover,
+.hero__container .border-inputs .bottom-left-container .top-left-input:hover,
+.hero__container .border-inputs .bottom-left-container .top-right-input:hover,
+.hero__container .border-inputs .bottom-left-container .bottom-left-input:hover,
+.hero__container .border-inputs .bottom-left-container .bottom-right-input:hover,
+.hero__container .border-inputs .bottom-right-container .top-left-input:hover,
+.hero__container .border-inputs .bottom-right-container .top-right-input:hover,
+.hero__container .border-inputs .bottom-right-container .bottom-left-input:hover,
+.hero__container .border-inputs .bottom-right-container .bottom-right-input:hover {
+  opacity: 1;
+}
+.hero__container .border-inputs .top-left-container .top-left-input::-webkit-slider-thumb,
+.hero__container .border-inputs .top-left-container .top-right-input::-webkit-slider-thumb,
+.hero__container .border-inputs .top-left-container .bottom-left-input::-webkit-slider-thumb,
+.hero__container .border-inputs .top-left-container .bottom-right-input::-webkit-slider-thumb,
+.hero__container .border-inputs .top-right-container .top-left-input::-webkit-slider-thumb,
+.hero__container .border-inputs .top-right-container .top-right-input::-webkit-slider-thumb,
+.hero__container .border-inputs .top-right-container .bottom-left-input::-webkit-slider-thumb,
+.hero__container .border-inputs .top-right-container .bottom-right-input::-webkit-slider-thumb,
+.hero__container .border-inputs .bottom-left-container .top-left-input::-webkit-slider-thumb,
+.hero__container .border-inputs .bottom-left-container .top-right-input::-webkit-slider-thumb,
+.hero__container .border-inputs .bottom-left-container .bottom-left-input::-webkit-slider-thumb,
+.hero__container .border-inputs .bottom-left-container .bottom-right-input::-webkit-slider-thumb,
+.hero__container .border-inputs .bottom-right-container .top-left-input::-webkit-slider-thumb,
+.hero__container .border-inputs .bottom-right-container .top-right-input::-webkit-slider-thumb,
+.hero__container .border-inputs .bottom-right-container .bottom-left-input::-webkit-slider-thumb,
+.hero__container .border-inputs .bottom-right-container .bottom-right-input::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #FF6E31;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.hero__container .border-inputs .top-left-container .top-left-input::-moz-range-thumb,
+.hero__container .border-inputs .top-left-container .top-right-input::-moz-range-thumb,
+.hero__container .border-inputs .top-left-container .bottom-left-input::-moz-range-thumb,
+.hero__container .border-inputs .top-left-container .bottom-right-input::-moz-range-thumb,
+.hero__container .border-inputs .top-right-container .top-left-input::-moz-range-thumb,
+.hero__container .border-inputs .top-right-container .top-right-input::-moz-range-thumb,
+.hero__container .border-inputs .top-right-container .bottom-left-input::-moz-range-thumb,
+.hero__container .border-inputs .top-right-container .bottom-right-input::-moz-range-thumb,
+.hero__container .border-inputs .bottom-left-container .top-left-input::-moz-range-thumb,
+.hero__container .border-inputs .bottom-left-container .top-right-input::-moz-range-thumb,
+.hero__container .border-inputs .bottom-left-container .bottom-left-input::-moz-range-thumb,
+.hero__container .border-inputs .bottom-left-container .bottom-right-input::-moz-range-thumb,
+.hero__container .border-inputs .bottom-right-container .top-left-input::-moz-range-thumb,
+.hero__container .border-inputs .bottom-right-container .top-right-input::-moz-range-thumb,
+.hero__container .border-inputs .bottom-right-container .bottom-left-input::-moz-range-thumb,
+.hero__container .border-inputs .bottom-right-container .bottom-right-input::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: #FF6E31;
+  cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  .hero__container .border-inputs .top-left-container .top-left-input,
+.hero__container .border-inputs .top-left-container .top-right-input,
+.hero__container .border-inputs .top-left-container .bottom-left-input,
+.hero__container .border-inputs .top-left-container .bottom-right-input,
+.hero__container .border-inputs .top-right-container .top-left-input,
+.hero__container .border-inputs .top-right-container .top-right-input,
+.hero__container .border-inputs .top-right-container .bottom-left-input,
+.hero__container .border-inputs .top-right-container .bottom-right-input,
+.hero__container .border-inputs .bottom-left-container .top-left-input,
+.hero__container .border-inputs .bottom-left-container .top-right-input,
+.hero__container .border-inputs .bottom-left-container .bottom-left-input,
+.hero__container .border-inputs .bottom-left-container .bottom-right-input,
+.hero__container .border-inputs .bottom-right-container .top-left-input,
+.hero__container .border-inputs .bottom-right-container .top-right-input,
+.hero__container .border-inputs .bottom-right-container .bottom-left-input,
+.hero__container .border-inputs .bottom-right-container .bottom-right-input {
+    opacity: 0.7;
+  }
+  .hero__container .border-inputs .top-left-container .top-left-input:hover,
+.hero__container .border-inputs .top-left-container .top-right-input:hover,
+.hero__container .border-inputs .top-left-container .bottom-left-input:hover,
+.hero__container .border-inputs .top-left-container .bottom-right-input:hover,
+.hero__container .border-inputs .top-right-container .top-left-input:hover,
+.hero__container .border-inputs .top-right-container .top-right-input:hover,
+.hero__container .border-inputs .top-right-container .bottom-left-input:hover,
+.hero__container .border-inputs .top-right-container .bottom-right-input:hover,
+.hero__container .border-inputs .bottom-left-container .top-left-input:hover,
+.hero__container .border-inputs .bottom-left-container .top-right-input:hover,
+.hero__container .border-inputs .bottom-left-container .bottom-left-input:hover,
+.hero__container .border-inputs .bottom-left-container .bottom-right-input:hover,
+.hero__container .border-inputs .bottom-right-container .top-left-input:hover,
+.hero__container .border-inputs .bottom-right-container .top-right-input:hover,
+.hero__container .border-inputs .bottom-right-container .bottom-left-input:hover,
+.hero__container .border-inputs .bottom-right-container .bottom-right-input:hover {
+    opacity: 1;
+  }
+  .hero__container .border-inputs .top-left-container .top-left-input::-webkit-slider-thumb,
+.hero__container .border-inputs .top-left-container .top-right-input::-webkit-slider-thumb,
+.hero__container .border-inputs .top-left-container .bottom-left-input::-webkit-slider-thumb,
+.hero__container .border-inputs .top-left-container .bottom-right-input::-webkit-slider-thumb,
+.hero__container .border-inputs .top-right-container .top-left-input::-webkit-slider-thumb,
+.hero__container .border-inputs .top-right-container .top-right-input::-webkit-slider-thumb,
+.hero__container .border-inputs .top-right-container .bottom-left-input::-webkit-slider-thumb,
+.hero__container .border-inputs .top-right-container .bottom-right-input::-webkit-slider-thumb,
+.hero__container .border-inputs .bottom-left-container .top-left-input::-webkit-slider-thumb,
+.hero__container .border-inputs .bottom-left-container .top-right-input::-webkit-slider-thumb,
+.hero__container .border-inputs .bottom-left-container .bottom-left-input::-webkit-slider-thumb,
+.hero__container .border-inputs .bottom-left-container .bottom-right-input::-webkit-slider-thumb,
+.hero__container .border-inputs .bottom-right-container .top-left-input::-webkit-slider-thumb,
+.hero__container .border-inputs .bottom-right-container .top-right-input::-webkit-slider-thumb,
+.hero__container .border-inputs .bottom-right-container .bottom-left-input::-webkit-slider-thumb,
+.hero__container .border-inputs .bottom-right-container .bottom-right-input::-webkit-slider-thumb {
+    cursor: pointer;
+  }
+  .hero__container .border-inputs .top-left-container .top-left-input::-moz-range-thumb,
+.hero__container .border-inputs .top-left-container .top-right-input::-moz-range-thumb,
+.hero__container .border-inputs .top-left-container .bottom-left-input::-moz-range-thumb,
+.hero__container .border-inputs .top-left-container .bottom-right-input::-moz-range-thumb,
+.hero__container .border-inputs .top-right-container .top-left-input::-moz-range-thumb,
+.hero__container .border-inputs .top-right-container .top-right-input::-moz-range-thumb,
+.hero__container .border-inputs .top-right-container .bottom-left-input::-moz-range-thumb,
+.hero__container .border-inputs .top-right-container .bottom-right-input::-moz-range-thumb,
+.hero__container .border-inputs .bottom-left-container .top-left-input::-moz-range-thumb,
+.hero__container .border-inputs .bottom-left-container .top-right-input::-moz-range-thumb,
+.hero__container .border-inputs .bottom-left-container .bottom-left-input::-moz-range-thumb,
+.hero__container .border-inputs .bottom-left-container .bottom-right-input::-moz-range-thumb,
+.hero__container .border-inputs .bottom-right-container .top-left-input::-moz-range-thumb,
+.hero__container .border-inputs .bottom-right-container .top-right-input::-moz-range-thumb,
+.hero__container .border-inputs .bottom-right-container .bottom-left-input::-moz-range-thumb,
+.hero__container .border-inputs .bottom-right-container .bottom-right-input::-moz-range-thumb {
+    cursor: pointer;
+  }
+}
+.hero__container .border-inputs .bottom-right-container {
+  margin-bottom: 25px;
+}
+@media screen and (min-width: 500px) {
+  .hero__container .border-inputs .bottom-right-container {
+    margin-bottom: 50px;
+  }
+}
+.hero__container .border-inputs .css-copy-btn {
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: #FF6E31;
+  border: none;
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+@media screen and (min-width: 1024px) {
+  .hero__container .border-inputs .css-copy-btn {
+    cursor: pointer;
+  }
+  .hero__container .border-inputs .css-copy-btn:hover {
+    background-color: #c75625;
+  }
+}
+.hero__container .border-inputs .clicked {
+  background-color: #c75625;
 }/*# sourceMappingURL=styles.css.map */

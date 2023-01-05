@@ -1,11 +1,29 @@
 .hero {
   padding-top: 50px;
+  padding-bottom: 50px;
+
+  @include breakpoint(tablet) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 
   &__container {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .hero-title {
+      font-size: 2.5rem;
+      text-align: center;
+      color: #fff;
+      margin-bottom: 25px;
+
+      @include breakpoint(tablet) {
+        font-size: 4rem;
+        margin-bottom: 50px;
+      }
+    }
 
     .border-result {
       width: 100%;
@@ -16,10 +34,131 @@
       align-items: center;
       justify-content: center;
 
+      @include breakpoint(tablet) {
+        max-width: 450px;
+      }
+
       span {
         color: #FF6E31;
         font-size: 0.8rem;
-        width: 220px;
+        width: 230px;
+
+        @include breakpoint(tablet) {
+          font-size: 1rem;
+          width: 285px;
+        }
+      }
+    }
+
+    .border-inputs {
+      margin-top: 50px;
+      width: 100%;
+      
+      @include breakpoint(tablet) {
+        max-width: 450px;
+      }
+      
+      .top-left-container,
+      .top-right-container,
+      .bottom-left-container,
+      .bottom-right-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+        
+        .top-left-label,
+        .top-right-label,
+        .bottom-left-label,
+        .bottom-right-label {
+          color: #FF6E31;
+          font-weight: 600;
+          pointer-events: none;
+          user-select: none;
+        }
+
+        .top-left-input,
+        .top-right-input,
+        .bottom-left-input,
+        .bottom-right-input {
+          appearance: none;
+          -webkit-appearance: none;
+          height: 10px;
+          background-color: #182542;
+          outline: none;
+          opacity: 1;
+          transition: opacity 0.2s ease;
+          border-radius: 20px;
+
+          &:hover {
+            opacity: 1;
+          }
+
+          &::-webkit-slider-thumb {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            background-color: #FF6E31;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+
+          &::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            background-color: #FF6E31;
+            cursor: pointer;
+          }
+
+          @include breakpoint(largeScreen) {
+            opacity: 0.7;
+
+            &:hover {
+              opacity: 1;
+            }
+
+            &::-webkit-slider-thumb {
+              cursor: pointer;
+            }
+
+            &::-moz-range-thumb {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      
+      .bottom-right-container {
+        margin-bottom: 25px;
+
+        @include breakpoint(tablet) {
+          margin-bottom: 50px;
+        }
+      }
+
+      .css-copy-btn {
+        width: 100%;
+        padding: 10px 20px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #fff;
+        background-color: #FF6E31;
+        border: none;
+        border-radius: 10px;
+        transition: background 0.2s ease;
+
+        @include breakpoint(largeScreen) {
+          cursor: pointer;
+           
+          &:hover {
+            background-color: #c75625;
+          }
+        }
+      }
+
+      .clicked {
+        background-color: #c75625;
       }
     }
   }

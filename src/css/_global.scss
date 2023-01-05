@@ -21,4 +21,19 @@ body {
 .wrapper {
   padding-left: 25px;
   padding-right: 25px;
+
+  @include breakpoint(tablet) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  @include breakpoint(largeScreen) {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
+  @include breakpoint(extraLargeScreen) {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
 }
